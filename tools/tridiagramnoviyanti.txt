@@ -1,0 +1,100 @@
+apkabsenkehadiran/
+│
+├── index.php                 # Fitur 1: Homepage / halaman awal selamat datang
+│
+├── assets/
+│   ├── js/
+│   ├── css/
+│   ├── plugins/
+│   └── images/
+│       ├── slider/
+│       ├── siswa/
+│       ├── walikelas/
+│       ├── user/
+│       └── perizinan/
+│  
+├── views/
+│   │
+│   ├── component/ 
+│   │   ├── tamu/
+│   │   │   ├── navbar.php    => navbar halaman depan (Homepage)
+│   │   │   └── footer.php
+│   │   ├── user/
+│   │   │   ├── navbar.php    => navbar admin & petugas (ada foto, role, namauser, logout)
+│   │   │   ├── sidebaradmin.php    => sidebar khusus Admin (akses seluruh fitur)
+│   │   │   ├── sidebarpetugas.php  => sidebar Petugas (tanpa menu data user)
+│   │   │   └── footer.php
+│   │   └── siswa/
+│   │       ├── navbar.php    => navbar siswa (ada foto, role, namasiswa, logout)
+│   │       ├── sidebar.php   => sidebar siswa (dashboard, riwayat, pengajuan izin)
+│   │       └── footer.php
+│   │
+│   ├── user/   ← (ADMIN & PETUGAS)
+│   │   ├── dashboard/
+│   │   │   └── dashboarduser.php   # Fitur 7: Dashboard user
+│   │   ├── laporan/
+│   │   │   ├── index.php           # Fitur 6: Laporan
+│   │   │   ├── laporanharian.php
+│   │   │   ├── cetaklaporanharian.php
+│   │   │   ├── laporanbulanan.php
+│   │   │   ├── cetaklaporanbulanan.php
+│   │   │   ├── laporantahunan.php
+│   │   │   └── cetaklaporantahunan.php
+│   │   ├── siswa/                  # Fitur 8: Data siswa
+│   │   │   ├── index.php
+│   │   │   ├── create.php
+│   │   │   ├── edit.php
+│   │   │   └── show.php
+│   │   ├── walikelas/              # Fitur 9: Data walikelas
+│   │   │   ├── index.php
+│   │   │   ├── create.php
+│   │   │   ├── edit.php
+│   │   │   └── show.php
+│   │   ├── user/                   # Fitur 10: Data user (khusus Admin)
+│   │   │   ├── index.php
+│   │   │   ├── create.php
+│   │   │   ├── edit.php
+│   │   │   └── show.php
+│   │   ├── kehadiran/              # Fitur 11: Input kehadiran
+│   │   │   ├── index.php
+│   │   │   ├── create.php
+│   │   │   ├── edit.php
+│   │   │   └── show.php
+│   │   └── perestuanizin/          # Fitur 14: Perestuan izin (persetujuan/verifikasi)
+│   │       ├── index.php
+│   │       ├── edit.php
+│   │       └── show.php
+│   │
+│   ├── siswa/  ← (SISWA)
+│   │   ├── dashboardsiswa.php      # Fitur 5: Dashboard siswa
+│   │   ├── riwayatkehadiran.php    # Fitur 12: Riwayat kehadiran
+│   │   └── pengajuanizin/          # Fitur 13: Pengajuan izin
+│   │       ├── index.php
+│   │       ├── create.php
+│   │       └── show.php
+│   │
+│   ├── landing/ ← (PUBLIC)
+│   │   └── home.php                # Fitur 1: Homepage
+│   │
+│   ├── auth/   
+│   │   ├── logout.php
+│   │   ├── loginuser.php           # Fitur 2: Login user
+│   │   ├── loginsiswa.php          # Fitur 3: Login siswa
+│   │   └── registersiswa.php       # Fitur 4: Register siswa
+│   │
+│   └── errors/
+│       ├── 404.php
+│       ├── 403.php
+│       └── 500.php
+│
+└── proses/
+    ├── koneksi.php
+    ├── session.php
+    ├── prosesuser.php
+    ├── prosesdashboarduser.php
+    ├── prosesdashboardsiswa.php
+    ├── prosessiswa.php
+    ├── proseswalikelas.php
+    ├── proseskehadiran.php
+    ├── prosesperizinan.php
+    └── proseslaporan.php
